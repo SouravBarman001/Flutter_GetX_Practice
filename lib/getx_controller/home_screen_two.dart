@@ -10,8 +10,8 @@ class HomeScreenTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    HomeScreenTwoController homeScreenTwoController = Get.put(HomeScreenTwoController());
-
+   // HomeScreenTwoController homeScreenTwoController = Get.put(HomeScreenTwoController());
+    HomeScreenTwoController homeScreenTwoController = Get.find(tag: 'HomeScreenTwoController');
 
     return Scaffold(
       appBar: AppBar(

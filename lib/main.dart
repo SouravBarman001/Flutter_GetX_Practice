@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxpractice/routes/page_three.dart';
 import 'package:getxpractice/routes/page_two.dart';
+import 'getx_controller/favourite_added.dart';
+import 'getx_controller/favourite_controller.dart';
 import 'getx_controller/home_screen_two.dart';
+import 'getx_controller/home_screen_two_controller.dart';
 
 void main() {
+
+  Get.put(HomeScreenTwoController(), tag: 'HomeScreenTwoController');
+  Get.put(FavouriteController(), tag: 'Favourite');
+
   runApp(const MyApp());
 }
 
@@ -21,9 +28,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreenTwo(),
+      home: const Favourite(),
       getPages: [
-           GetPage(name: '/', page:()=> const HomeScreenTwo()),
+           GetPage(name: '/', page:()=> const Favourite()),
            GetPage(name: '/two', page:()=> const PageTwo()),
            GetPage(name: '/three', page:()=> const PageThree()),
 
